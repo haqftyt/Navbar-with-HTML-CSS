@@ -3,14 +3,31 @@
     margin:0;
     padding:0;
     color:black;
+    font-family: sans-serif;
+}
+.logo{
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
 }
 nav{
     background-color: blue;
     display:flex;
     justify-content: space-around;
+    align-items: center;
+}
+ul li{
+    display:inline-block;
+    font-size:16px;
+    padding:10px;
 }
 ul li a{
     text-decoration: none;
     list-style-type: none;
-
+    padding:10px;
+}
+li a:hover{
+    color:white;
+    border-bottom: 2px solid yellow;
+    transition: all 0.2s;
 }
