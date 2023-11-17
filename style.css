@@ -8,3 +8,6 @@ nav{
     display:flex;
     justify-content: space-around;
 }
+ul li{
+    display:inline-block;
+}
