@@ -7,8 +7,12 @@
 }
 .logo{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding:10px;
+}
+div h4{
+    padding:8px 0 0 10px;
+    font-size:20px;
 }
 nav{
     background-color: blue;
@@ -25,9 +29,42 @@ ul li a{
     text-decoration: none;
     list-style-type: none;
     padding:10px;
+    font-weight: 500;
 }
 li a:hover{
     color:white;
     border-bottom: 2px solid yellow;
     transition: all 0.2s;
+}
+h4:hover{
+    color:white;
+    transition: all 0.2s;
+}
+.menuline{
+    background-color: black;
+    width:25px;
+    height:3px;
+    margin:3px 0 3px 0;
+    border-radius:7px;
+}
+.menu{
+    display:none;
+}
+.Skillslist{
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    top:10;
+    margin-top:20px;
+    left:20;
+    background-color: blue;
+    border-radius: 5px;
+}
+@media all and (max-width:509px){
+    ul li{
+        display:none;
+    }
+    .menu{
+        display:block;
+    }
 }
