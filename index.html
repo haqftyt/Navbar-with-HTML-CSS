@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <title>blabber</title>
+    <title>Navbar with HTML and CSS</title>
 </head>
 <body>
    <nav>
@@ -16,20 +16,30 @@
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Skills</a>
-        <ul class="Skillslist"><li><a href="#">Programming Skills</a></li>
-    <li><a href="#">Education</a></li>
-    <li><a href="#">Internship</a></li></ul>
-        </li>
+        <li class="dropdown"><a href="#">Skills <span style="font-size:11px">&#9660</span></a>
+            <ul><li><a href="#">Programming Skills</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Internship</a></li></ul></li>
         <li><a href="#">Contact</a></li>
-       </ul>
+    </ul>
        <div class="menu">
         <div class="menuline"></div>
         <div class="menuline"></div>
         <div class="menuline"></div>
        </div>
    </nav>
-   
+   <script>
+    const menu=document.querySelector('.menu');
+    const list=document.querySelector('ul');
+    menu.addEventListener('click',()=>{
+        list.classList.toggle('showmenu');
+    })
+    const skills=document.querySelector('.dropdown');
+    const items=document.querySelector('nav ul li ul');
+    skills.addEventListener('click',()=>{
+        items.classList.toggle('showskill');
+    })
+   </script>
 </body>
 </html>
-
+<!-- -->

@@ -7,7 +7,6 @@
 }
 .logo{
     display:flex;
-    justify-content: space-around;
     padding:10px;
 }
 div h4{
@@ -50,9 +49,9 @@ h4:hover{
 .menu{
     display:none;
 }
-.Skillslist{
+nav ul li ul{
     position:absolute;
-    display:flex;
+    display:none;
     flex-direction: column;
     top:10;
     margin-top:20px;
@@ -60,11 +59,43 @@ h4:hover{
     background-color: blue;
     border-radius: 5px;
 }
-@media all and (max-width:509px){
+ul li ul li{
+    padding:20px;
+}
+
+@media all and (max-width:584px){
+    nav{
+        flex-direction:column;
+    }
+    .logo{
+        align-self: flex-start;
+    }
+    ul li ul li{
+        padding:10px;
+    }
     ul li{
+        display:block;
+        text-align: center;
+        padding:11px;
+        margin-top:5px;
+    }
+    ul{
         display:none;
     }
     .menu{
+        position:absolute;
+        left:90%;
+        top:3%;
         display:block;
+        margin-right:-60px;
     }
+    nav ul li ul{
+        position: relative;
+    }
+}
+.showmenu{
+    display:block;
+}
+.showskill{
+    display:flex;
 }
